@@ -1,0 +1,18 @@
+{
+  "name": "mealie-visual-regression-r02-k10",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Visual regression test suite for Mealie - Software Testing course R02 K10",
+  "scripts": {
+    "test:visual": "playwright test",
+    "test:visual:update": "playwright test --update-snapshots",
+    "test:visual:report": "playwright show-report",
+    "lint": "eslint tests --ext .ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.0",
+    "@types/node": "^24.0.0",
+    "dotenv": "^16.6.1",
+    "typescript": "^5.9.0"
+  }
+}

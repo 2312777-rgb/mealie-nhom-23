@@ -1,0 +1,26 @@
+name: Visual Regression
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  visual-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      # Start Mealie with deterministic seed data before enabling this command.
+      # - run: docker compose -f docker-compose.visual.yml up -d --wait
+      # - run: npm run test:visual
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          if-no-files-found: ignore
