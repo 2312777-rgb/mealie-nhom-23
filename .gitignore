@@ -3,4 +3,11 @@ playwright-report/
 test-results/
 .env
 .env.local
+.auth/
 *.log
+*.doc
+*.docx
+*.docm
+*.zip
+output/
+__pycache__/

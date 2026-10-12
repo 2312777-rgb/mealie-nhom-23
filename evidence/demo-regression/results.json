@@ -1,0 +1,303 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Users\\toan8\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "D:\\mealie\\mealie-nhom-23\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project=chromium",
+      "--grep=VR01",
+      "--output=evidence/demo-regression/artifacts"
+    ],
+    "configFile": "D:\\mealie\\mealie-nhom-23\\playwright.config.ts",
+    "rootDir": "D:/mealie/mealie-nhom-23/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/mealie/mealie-nhom-23/evidence/demo-regression/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "D:/mealie/mealie-nhom-23/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.ts/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/mealie/mealie-nhom-23/evidence/demo-regression/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/mealie/mealie-nhom-23/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/visual\\.spec\\.ts/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/mealie/mealie-nhom-23/evidence/demo-regression/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "smoke",
+        "name": "smoke",
+        "testDir": "D:/mealie/mealie-nhom-23/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/business\\.spec\\.ts/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\mealie\\mealie-nhom-23\\evidence\\demo-regression\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "D:\\mealie\\mealie-nhom-23\\tests",
+        "snapshotDir": "D:\\mealie\\mealie-nhom-23\\tests",
+        "testIgnore": [],
+        "testMatch": {},
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:3000",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "deviceScaleFactor": 1,
+          "colorScheme": "light",
+          "locale": "en-US",
+          "timezoneId": "UTC",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "screen-wake-lock"
+          ],
+          "browserName": "chromium",
+          "storageState": ".auth/user.json"
+        },
+        "dependencies": [
+          "setup"
+        ],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "none",
+    "updateSourceMethod": "patch",
+    "version": "1.64.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "auth.setup.ts",
+      "file": "auth.setup.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "authenticate test user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2573,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T07:25:46.799Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "17e3fe6f4d9d8bd79c6b-fa94e4fb696b33b8bfcc",
+          "file": "auth.setup.ts",
+          "line": 6,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "visual.spec.ts",
+      "file": "visual.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "VR01 recipe-finder",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2560,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  Expected an image 1440px by 900px, received 1488px by 900px. 18217 pixels (ratio 0.02 of all image pixels) are different.\n\n  Snapshot: VR01-recipe-finder.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(VR01-recipe-finder.png)\" with timeout 20000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - Expected an image 1440px by 900px, received 1488px by 900px. 18217 pixels (ratio 0.02 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 1440px by 900px, received 1488px by 900px. 18217 pixels (ratio 0.02 of all image pixels) are different.\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  Expected an image 1440px by 900px, received 1488px by 900px. 18217 pixels (ratio 0.02 of all image pixels) are different.\n\n  Snapshot: VR01-recipe-finder.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(VR01-recipe-finder.png)\" with timeout 20000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - Expected an image 1440px by 900px, received 1488px by 900px. 18217 pixels (ratio 0.02 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 1440px by 900px, received 1488px by 900px. 18217 pixels (ratio 0.02 of all image pixels) are different.\u001b[22m\n\n    at D:\\mealie\\mealie-nhom-23\\tests\\visual.spec.ts:67:24",
+                    "location": {
+                      "file": "D:\\mealie\\mealie-nhom-23\\tests\\visual.spec.ts",
+                      "column": 24,
+                      "line": 67
+                    },
+                    "snippet": "  65 |       contentType: \"application/json\",\n  66 |     });\n> 67 |     await expect(page).toHaveScreenshot(`${scenario.id}-${scenario.name}.png`, {\n     |                        ^\n  68 |       fullPage: true, animations: \"disabled\", maxDiffPixelRatio: 0.01,\n  69 |     });\n  70 |     expect(failures, \"Errors during capture\").toEqual([]);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\mealie\\mealie-nhom-23\\tests\\visual.spec.ts",
+                        "column": 24,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  Expected an image 1440px by 900px, received 1488px by 900px. 18217 pixels (ratio 0.02 of all image pixels) are different.\n\n  Snapshot: VR01-recipe-finder.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(VR01-recipe-finder.png)\" with timeout 20000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - Expected an image 1440px by 900px, received 1488px by 900px. 18217 pixels (ratio 0.02 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 1440px by 900px, received 1488px by 900px. 18217 pixels (ratio 0.02 of all image pixels) are different.\u001b[22m\n\n\n  65 |       contentType: \"application/json\",\n  66 |     });\n> 67 |     await expect(page).toHaveScreenshot(`${scenario.id}-${scenario.name}.png`, {\n     |                        ^\n  68 |       fullPage: true, animations: \"disabled\", maxDiffPixelRatio: 0.01,\n  69 |     });\n  70 |     expect(failures, \"Errors during capture\").toEqual([]);\n    at D:\\mealie\\mealie-nhom-23\\tests\\visual.spec.ts:67:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T07:25:50.534Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "scenario",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IlZSMDEiLCJwYXRoIjoiL2cvcjAyLWsxMC1xYS9yZWNpcGVzL2ZpbmRlciIsInZpZXdwb3J0Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjkwMH0sImZpeGVkRGF0ZSI6IjIwMjYtMTAtMTJUMTI6MDA6MDBaIn0="
+                    },
+                    {
+                      "name": "VR01-recipe-finder-expected.png",
+                      "contentType": "image/png",
+                      "path": "D:\\mealie\\mealie-nhom-23\\tests\\__screenshots__\\visual.spec.ts\\VR01-recipe-finder.png"
+                    },
+                    {
+                      "name": "VR01-recipe-finder-actual.png",
+                      "contentType": "image/png",
+                      "path": "D:\\mealie\\mealie-nhom-23\\evidence\\demo-regression\\artifacts\\visual-VR01-recipe-finder-chromium\\VR01-recipe-finder-actual.png"
+                    },
+                    {
+                      "name": "VR01-recipe-finder-diff.png",
+                      "contentType": "image/png",
+                      "path": "D:\\mealie\\mealie-nhom-23\\evidence\\demo-regression\\artifacts\\visual-VR01-recipe-finder-chromium\\VR01-recipe-finder-diff.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\mealie\\mealie-nhom-23\\evidence\\demo-regression\\artifacts\\visual-VR01-recipe-finder-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\mealie\\mealie-nhom-23\\evidence\\demo-regression\\artifacts\\visual-VR01-recipe-finder-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\mealie\\mealie-nhom-23\\evidence\\demo-regression\\artifacts\\visual-VR01-recipe-finder-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\mealie\\mealie-nhom-23\\tests\\visual.spec.ts",
+                    "column": 24,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8324bb52c49185e48ff4-69e16c3fa17079e1c368",
+          "file": "visual.spec.ts",
+          "line": 30,
+          "column": 7
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-12T07:25:46.325Z",
+    "duration": 7687.912,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

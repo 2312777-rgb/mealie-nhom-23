@@ -1,0 +1,45 @@
+{
+  "rows": [
+    [
+      "Backend và UI",
+      "Đã chạy thành công",
+      "Docker healthy và UI localhost 3000"
+    ],
+    [
+      "TypeScript",
+      "Pass",
+      "tsc --noEmit"
+    ],
+    [
+      "Visual regression",
+      "8 trên 8 pass",
+      "evidence/final-results.json"
+    ],
+    [
+      "Ba nghiệp vụ",
+      "3 trên 3 pass",
+      "evidence/flows và final-results.json"
+    ],
+    [
+      "Toàn bộ test",
+      "12 pass và 0 fail",
+      "61.1 giây gồm 1 setup"
+    ],
+    [
+      "Seed chạy lại",
+      "Không tăng số bản ghi",
+      "10 recipe 3 category 10 food 2 list 7 meal"
+    ],
+    [
+      "Hai demo CSS",
+      "Mỗi demo tạo 1 mismatch đúng dự kiến",
+      "evidence/demo-regression và demo-intentional"
+    ],
+    [
+      "GitHub CI",
+      "Đã cấu hình chưa chạy GitHub",
+      "Cần runner Windows và URL workflow run"
+    ]
+  ],
+  "conclusion": "Kết quả xác nhận bộ harness chạy được trên máy QA hiện tại. Tám baseline đã được kiểm tra trực quan kỹ thuật; nhóm cần xác nhận người duyệt trước khi nộp. Hai sai lệch CSS là demo tổng hợp, không phải lỗi tự nhiên của upstream. Chưa thực hiện kiểm chứng toàn bộ test upstream hoặc dựng lại trên máy thành viên thứ hai."
+}

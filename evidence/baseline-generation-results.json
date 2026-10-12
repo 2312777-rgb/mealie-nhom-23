@@ -1,0 +1,556 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Users\\toan8\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "D:\\mealie\\mealie-nhom-23\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project=chromium",
+      "--update-snapshots"
+    ],
+    "configFile": "D:\\mealie\\mealie-nhom-23\\playwright.config.ts",
+    "rootDir": "D:/mealie/mealie-nhom-23/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/mealie/mealie-nhom-23/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "D:/mealie/mealie-nhom-23/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.ts/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/mealie/mealie-nhom-23/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/mealie/mealie-nhom-23/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/visual\\.spec\\.ts/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/mealie/mealie-nhom-23/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "smoke",
+        "name": "smoke",
+        "testDir": "D:/mealie/mealie-nhom-23/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/business\\.spec\\.ts/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\mealie\\mealie-nhom-23\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "D:\\mealie\\mealie-nhom-23\\tests",
+        "snapshotDir": "D:\\mealie\\mealie-nhom-23\\tests",
+        "testIgnore": [],
+        "testMatch": {},
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:3000",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "deviceScaleFactor": 1,
+          "colorScheme": "light",
+          "locale": "en-US",
+          "timezoneId": "UTC",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "screen-wake-lock"
+          ],
+          "browserName": "chromium",
+          "storageState": ".auth/user.json"
+        },
+        "dependencies": [
+          "setup"
+        ],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "changed",
+    "updateSourceMethod": "patch",
+    "version": "1.64.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "auth.setup.ts",
+      "file": "auth.setup.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "authenticate test user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2738,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T07:17:50.960Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "17e3fe6f4d9d8bd79c6b-fa94e4fb696b33b8bfcc",
+          "file": "auth.setup.ts",
+          "line": 6,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "visual.spec.ts",
+      "file": "visual.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "VR01 recipe-finder",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2285,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "A snapshot doesn't exist at D:\\mealie\\mealie-nhom-23\\tests\\__screenshots__\\visual.spec.ts\\VR01-recipe-finder.png, writing actual.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T07:17:54.863Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "scenario",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IlZSMDEiLCJwYXRoIjoiL2cvcjAyLWsxMC1xYS9yZWNpcGVzL2ZpbmRlciIsInZpZXdwb3J0Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjkwMH0sImZpeGVkRGF0ZSI6IjIwMjYtMTAtMTJUMTI6MDA6MDBaIn0="
+                    },
+                    {
+                      "name": "VR01-recipe-finder-expected.png",
+                      "contentType": "image/png",
+                      "path": "D:\\mealie\\mealie-nhom-23\\tests\\__screenshots__\\visual.spec.ts\\VR01-recipe-finder.png"
+                    },
+                    {
+                      "name": "VR01-recipe-finder-actual.png",
+                      "contentType": "image/png",
+                      "path": "D:\\mealie\\mealie-nhom-23\\test-results\\visual-VR01-recipe-finder-chromium\\VR01-recipe-finder-actual.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8324bb52c49185e48ff4-69e16c3fa17079e1c368",
+          "file": "visual.spec.ts",
+          "line": 28,
+          "column": 7
+        },
+        {
+          "title": "VR02 recipe-timeline",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2456,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T07:17:57.315Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "scenario",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IlZSMDIiLCJwYXRoIjoiL2cvcjAyLWsxMC1xYS9yZWNpcGVzL3RpbWVsaW5lIiwidmlld3BvcnQiOnsid2lkdGgiOjE0NDAsImhlaWdodCI6OTAwfSwiZml4ZWREYXRlIjoiMjAyNi0xMC0xMlQxMjowMDowMFoifQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8324bb52c49185e48ff4-c8f270c5438d3019edf4",
+          "file": "visual.spec.ts",
+          "line": 28,
+          "column": 7
+        },
+        {
+          "title": "VR03 recipe-categories",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1935,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T07:17:59.778Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "scenario",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IlZSMDMiLCJwYXRoIjoiL2cvcjAyLWsxMC1xYS9yZWNpcGVzL2NhdGVnb3JpZXMiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0Ijo5MDB9LCJmaXhlZERhdGUiOiIyMDI2LTEwLTEyVDEyOjAwOjAwWiJ9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8324bb52c49185e48ff4-bf38250ec29c7fcabdae",
+          "file": "visual.spec.ts",
+          "line": 28,
+          "column": 7
+        },
+        {
+          "title": "VR04 meal-planner",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2107,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T07:18:01.722Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "scenario",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IlZSMDQiLCJwYXRoIjoiL2hvdXNlaG9sZC9tZWFscGxhbi9wbGFubmVyL3ZpZXciLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0Ijo5MDB9LCJmaXhlZERhdGUiOiIyMDI2LTEwLTEyVDEyOjAwOjAwWiJ9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8324bb52c49185e48ff4-d796037f9a4849e0c968",
+          "file": "visual.spec.ts",
+          "line": 28,
+          "column": 7
+        },
+        {
+          "title": "VR05 shopping-lists",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1993,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "A snapshot doesn't exist at D:\\mealie\\mealie-nhom-23\\tests\\__screenshots__\\visual.spec.ts\\VR05-shopping-lists.png, writing actual.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T07:18:03.837Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "scenario",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IlZSMDUiLCJwYXRoIjoiL3Nob3BwaW5nLWxpc3RzIiwidmlld3BvcnQiOnsid2lkdGgiOjE0NDAsImhlaWdodCI6OTAwfSwiZml4ZWREYXRlIjoiMjAyNi0xMC0xMlQxMjowMDowMFoifQ=="
+                    },
+                    {
+                      "name": "VR05-shopping-lists-expected.png",
+                      "contentType": "image/png",
+                      "path": "D:\\mealie\\mealie-nhom-23\\tests\\__screenshots__\\visual.spec.ts\\VR05-shopping-lists.png"
+                    },
+                    {
+                      "name": "VR05-shopping-lists-actual.png",
+                      "contentType": "image/png",
+                      "path": "D:\\mealie\\mealie-nhom-23\\test-results\\visual-VR05-shopping-lists-chromium\\VR05-shopping-lists-actual.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8324bb52c49185e48ff4-356e6f55833eec7b3037",
+          "file": "visual.spec.ts",
+          "line": 28,
+          "column": 7
+        },
+        {
+          "title": "VR06 profile-dashboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2091,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T07:18:05.838Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "scenario",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IlZSMDYiLCJwYXRoIjoiL3VzZXIvcHJvZmlsZSIsInZpZXdwb3J0Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjkwMH0sImZpeGVkRGF0ZSI6IjIwMjYtMTAtMTJUMTI6MDA6MDBaIn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8324bb52c49185e48ff4-31fc07525cd9bf88af73",
+          "file": "visual.spec.ts",
+          "line": 28,
+          "column": 7
+        },
+        {
+          "title": "VR07 group-food-data",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2079,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T07:18:07.936Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "scenario",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IlZSMDciLCJwYXRoIjoiL2dyb3VwL2RhdGEvZm9vZHMiLCJ2aWV3cG9ydCI6eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0Ijo5MDB9LCJmaXhlZERhdGUiOiIyMDI2LTEwLTEyVDEyOjAwOjAwWiJ9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8324bb52c49185e48ff4-c84490031814a5257891",
+          "file": "visual.spec.ts",
+          "line": 28,
+          "column": 7
+        },
+        {
+          "title": "VR08 meal-plan-settings",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1991,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-12T07:18:10.023Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "scenario",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IlZSMDgiLCJwYXRoIjoiL2hvdXNlaG9sZC9tZWFscGxhbi9zZXR0aW5ncyIsInZpZXdwb3J0Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjkwMH0sImZpeGVkRGF0ZSI6IjIwMjYtMTAtMTJUMTI6MDA6MDBaIn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8324bb52c49185e48ff4-d413145aa00e1ac2f896",
+          "file": "visual.spec.ts",
+          "line": 28,
+          "column": 7
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-12T07:17:50.449Z",
+    "duration": 22932.86,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

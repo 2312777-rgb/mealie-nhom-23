@@ -1,0 +1,17 @@
+{
+  "before": {
+    "/recipes": 10,
+    "/organizers/categories": 3,
+    "/foods": 10,
+    "/households/shopping/lists": 2,
+    "/households/mealplans": 7
+  },
+  "after": {
+    "/recipes": 10,
+    "/organizers/categories": 3,
+    "/foods": 10,
+    "/households/shopping/lists": 2,
+    "/households/mealplans": 7
+  },
+  "unchanged": true
+}

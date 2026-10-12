@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-10-12T07:33:06.549Z",
+  "host": {
+    "platform": "win32",
+    "release": "10.0.26300",
+    "arch": "x64"
+  },
+  "node": "v24.19.0",
+  "playwright": "1.64.0",
+  "sourceCommit": "879b133b5f98dd91419948f363d2d6d58793c3a0",
+  "dockerImageId": "sha256:f7d80ad40102bfb03176b8453e4ed25906b27042759fbf45e845e9f6abc92cac",
+  "configuration": {
+    "repository": "https://github.com/mealie-recipes/mealie",
+    "commit": "879b133b5f98dd91419948f363d2d6d58793c3a0",
+    "version": "3.28.0",
+    "seedVersion": 1,
+    "fixedDate": "2026-10-12T12:00:00Z",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "deviceScaleFactor": 1,
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "maxDiffPixelRatio": 0.01,
+    "pixelColorThreshold": 0.2,
+    "baselinePlatform": "Windows"
+  },
+  "finalStats": {
+    "startTime": "2026-10-12T07:32:04.790Z",
+    "duration": 61103.280999999995,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "ciExecuted": false,
+  "syntheticDemos": true
+}

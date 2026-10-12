@@ -1,0 +1,13 @@
+{
+  "review": "Technical visual inspection completed; team sign-off pending",
+  "sha256": {
+    "VR01-recipe-finder.png": "a75d5357a99bddf92dca2ec16ba053c3cb63a525658d46ed3fc401f02fed5b7c",
+    "VR02-recipe-timeline.png": "64188495b5d3c2669550adca08a1eecb286c529d00f62cb098e321d36259cc03",
+    "VR03-recipe-categories.png": "7bf973e2ec11f1e0cfc226b5f4c4bd98ffebb0b2e0a9ebc31fc31e16c78811f6",
+    "VR04-meal-planner.png": "fafe0cefea4b34aa5955a6f52e42cdb235173d32d1d84b618e5e86cef7a40284",
+    "VR05-shopping-lists.png": "44e454585450e4d7c6ac4632103e1d20cc81d38591518d8bd17c56445d046f4d",
+    "VR06-profile-dashboard.png": "2175b0cc51c643162184671f732fb0f3e49a33871d35c6eed281da2914cf0072",
+    "VR07-group-food-data.png": "f5f1c8df33876fe0357f43a2e5f799c26e4f544c71fa3a27e9a825488f2535d7",
+    "VR08-meal-plan-settings.png": "84a90212a397b212799ca59994ed5af3e5b5ba6f445fdd56be8486e4ce872885"
+  }
+}

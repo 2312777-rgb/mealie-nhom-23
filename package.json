@@ -4,15 +4,20 @@
   "private": true,
   "description": "Visual regression test suite for Mealie - Software Testing course R02 K10",
   "scripts": {
-    "test:visual": "playwright test",
-    "test:visual:update": "playwright test --update-snapshots",
+    "test:visual": "playwright test --project=chromium",
+    "test:visual:update": "playwright test --project=chromium --update-snapshots",
     "test:visual:report": "playwright show-report",
-    "lint": "eslint tests --ext .ts"
+    "typecheck": "tsc --noEmit",
+    "seed": "node scripts/seed.mjs",
+    "test:list": "playwright test --list",
+    "bootstrap": "node scripts/bootstrap.mjs",
+    "test:smoke": "playwright test --project=smoke",
+    "test:demo": "node scripts/demo-regression.mjs"
   },
   "devDependencies": {
-    "@playwright/test": "^1.58.0",
-    "@types/node": "^24.0.0",
-    "dotenv": "^16.6.1",
-    "typescript": "^5.9.0"
+    "@playwright/test": "1.64.0",
+    "@types/node": "24.19.1",
+    "dotenv": "16.6.1",
+    "typescript": "5.9.3"
   }
 }

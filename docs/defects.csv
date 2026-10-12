@@ -1,0 +1,11 @@
+id,type,scenario,summary,root_cause,status
+ENV01,environment,setup,Native Windows python-ldap build failed,Missing Microsoft C++ Build Tools and native LDAP libraries,Resolved by Linux Docker backend
+ENV02,environment,setup,Port 9000 unavailable,MinIO from a different project already binds 9000,Resolved by host port 19000
+HAR01,harness,authentication,Password locator strict violation,Regex also matched password appended action button,Resolved by input name selector
+HAR02,harness,VR01,Finder expected recipe without selecting ingredients,Finder intentionally returns empty state before food or tool selection,Resolved by explicit empty-state scenario
+ENV03,environment,VR05,Wake Lock permission request denied in headless Chromium,Permission was not granted in test browser context,Resolved by screen-wake-lock permission
+HAR03,harness,FLOW01 FLOW02,Initial UI content was not ready within default timeout,Nuxt dev dependency optimization on first navigation,Resolved by 20 second retrying assertion
+DEMO-R01,synthetic,VR01,Injected 48 pixel content shift,CSS transform applied in browser only,Expected mismatch to verify detection
+DEMO-I01,synthetic,VR01,Requested demonstration background change,REQ-DEMO-01 browser-only CSS background,Expected mismatch requiring classification and approval
+HAR04,harness,VR04,Planner baseline missed animated recipe cards,Transition enter classes had not been removed when global CSS disabled transitions,Resolved by waiting for Vue spin enter classes before capture
+HAR05,harness,VR05,Single shopping list redirects to detail page,Mealie intentionally redirects when list count equals one,Resolved by two seeded lists and route checks after capture

@@ -1,0 +1,11 @@
+{
+  "mode": "intentional",
+  "synthetic": true,
+  "scenario": "VR01",
+  "expectedOutcome": "screenshot mismatch",
+  "classification": "intentional demonstration",
+  "requirement": "REQ-DEMO-01: demonstrate an explicitly requested page background color",
+  "rootCause": "Injected CSS changes main background to #1e40af",
+  "baselineChanged": false,
+  "note": "Controlled browser-only demonstration; not a defect discovered in upstream Mealie. A real intentional change still requires human approval before baseline update."
+}

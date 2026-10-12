@@ -1,0 +1,10 @@
+{
+  "seedVersion": 1,
+  "createdAt": "2026-10-12T07:24:53.173Z",
+  "recipes": 10,
+  "categories": 3,
+  "foods": 10,
+  "shoppingLists": 2,
+  "mealPlanDays": 7,
+  "fixedWeekStart": "2026-10-12"
+}

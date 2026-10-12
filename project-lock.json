@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/mealie-recipes/mealie",
+  "commit": "879b133b5f98dd91419948f363d2d6d58793c3a0",
+  "version": "3.28.0",
+  "seedVersion": 1,
+  "fixedDate": "2026-10-12T12:00:00Z",
+  "browser": "chromium",
+  "viewport": { "width": 1440, "height": 900 },
+  "deviceScaleFactor": 1,
+  "locale": "en-US",
+  "timezoneId": "UTC",
+  "maxDiffPixelRatio": 0.01,
+  "pixelColorThreshold": 0.2,
+  "baselinePlatform": "Windows"
+}

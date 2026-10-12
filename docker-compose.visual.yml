@@ -1,0 +1,23 @@
+name: mealie-r02-k10
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: mealie-nhom-23/Dockerfile.backend
+    ports:
+      - "127.0.0.1:19000:9000"
+    environment:
+      BASE_URL: http://localhost:3000
+      ALLOW_SIGNUP: "true"
+      API_DOCS: "true"
+      LOG_LEVEL: INFO
+      LOG_CONFIG_OVERRIDE: /source/mealie/core/logger/logconf.prod.json
+    volumes:
+      - qa-data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:9000/api/app/about"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+volumes:
+  qa-data:

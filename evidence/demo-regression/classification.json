@@ -1,0 +1,11 @@
+{
+  "mode": "regression",
+  "synthetic": true,
+  "scenario": "VR01",
+  "expectedOutcome": "screenshot mismatch",
+  "classification": "regression",
+  "requirement": null,
+  "rootCause": "Injected CSS translates main content 48 pixels",
+  "baselineChanged": false,
+  "note": "Controlled browser-only demonstration; not a defect discovered in upstream Mealie. A real intentional change still requires human approval before baseline update."
+}

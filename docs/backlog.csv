@@ -1,0 +1,14 @@
+id,title,status,evidence,owner
+QA01,Khóa source và dependency,Done,project-lock.json và lockfiles,Nhóm phân công
+QA02,Dựng Linux backend Docker và frontend Nuxt,Done,docker-compose.visual.yml và metadata,Nhóm phân công
+QA03,Tạo tài khoản QA và seed tái lập,Done,scripts và evidence/seed-idempotence.json,Nhóm phân công
+QA04,Phân tích kiến trúc và ba luồng dữ liệu,Done,docs/architecture.md,Nhóm phân công
+QA05,Triển khai tám visual scenario,Done,tests/visual.spec.ts,Nhóm phân công
+QA06,Kiểm chứng ba luồng API ghi và UI đọc,Done,tests/business.spec.ts và evidence/flows,Nhóm phân công
+QA07,Tạo baseline và so sánh,Done,tests/__screenshots__ và evidence/final-results.json,Nhóm phân công
+QA08,Demo intentional và regression tổng hợp,Done,evidence/demo-regression và evidence/demo-intentional,Nhóm phân công
+QA09,Cấu hình CI validate và self hosted visual,Configured chưa chạy GitHub,.github/workflows/visual-regression.yml,Nhóm phân công
+QA10,Báo cáo Word và gói nộp,Done,output,Nhóm phân công
+TEAM01,Bổ sung họ tên MSSV và xác nhận phân công,Pending,docs/team.md,Nhóm
+TEAM02,Duyệt baseline và chạy lại trên máy thành viên,Pending,docs/baseline-review.md,Nhóm
+TEAM03,Cập nhật Git board và đánh giá chéo thực tế,Pending,Link minh chứng của nhóm,Nhóm
