@@ -2,6 +2,81 @@
 
 Bộ hồ sơ nhóm 4 người gồm môi trường QA, seed tái lập, 8 visual test, 3 smoke test nghiệp vụ, demo phân biệt intentional/regression và báo cáo Word giữa kỳ/cuối kỳ. Mealie được khảo sát ở commit `879b133b5f98dd91419948f363d2d6d58793c3a0` (3.28.0). Đây là repository harness riêng nằm trong checkout Mealie, không sửa tính năng upstream.
 
+## Thành viên và phân công
+
+Phân công dưới đây dựa trên báo cáo giữa kỳ R02 K10, được chi tiết hóa thành đầu việc và tiêu chí bàn giao. Đây là kế hoạch trách nhiệm; kết quả chung trong `evidence/` không tự xác nhận đóng góp của từng người. Mỗi thành viên bổ sung link issue/PR/commit và xác nhận phần việc thực tế tại [docs/team.md](docs/team.md).
+
+| Thành viên | MSSV | Vai trò | Phạm vi chính | Người kiểm tra chéo |
+| --- | --- | --- | --- | --- |
+| Nguyễn Đức Thành | 2312749 | Phân tích hệ thống và tổng hợp báo cáo | Kiến trúc, ba luồng dữ liệu, kế hoạch, báo cáo và theo dõi tiến độ | K’ Nguyễn Quang Trường |
+| K’ Nguyễn Quang Trường | 2312789 | Môi trường và dữ liệu QA | Docker, khóa phiên bản, tài khoản QA, seed và onboarding | Nguyễn Viết Toàn |
+| Nguyễn Viết Toàn | 2312777 | Tự động hóa Playwright | Cấu hình, xác thực, VR01–VR04, FLOW01–FLOW02 và CI | Huỳnh Thành |
+| Huỳnh Thành | 2312748 | Kiểm thử giao diện và phân tích kết quả | VR05–VR08, FLOW03, baseline review, diff, defect và demo | Nguyễn Đức Thành |
+
+### Nguyễn Đức Thành — Phân tích hệ thống và tổng hợp báo cáo
+
+- Đọc cấu trúc frontend/backend; xác định actor, module, dependency và ranh giới group/household liên quan tới phạm vi kiểm thử.
+- Cập nhật sơ đồ component/container và giải thích ba luồng: công thức, thực đơn, danh sách mua sắm; chỉ rõ page/composable, API, controller/service, repository và DB.
+- Cùng Toàn và Huỳnh Thành hoàn thiện test plan: precondition, input, expected result, dữ liệu, rủi ro và tiêu chí pass/fail cho tám màn hình.
+- Theo dõi issue/board theo các trạng thái cần làm, đang làm, chờ review, hoàn thành; ghi người phụ trách và bằng chứng, không tự ghi nhận công việc chưa thực hiện.
+- Tổng hợp kết quả vào báo cáo giữa kỳ/cuối kỳ, đối chiếu yêu cầu A–H và K10; chuẩn bị nội dung mở đầu, sơ đồ kiến trúc, phạm vi và giới hạn khi thuyết trình.
+- Kiểm tra chéo VR05–VR08 và cách phân loại diff của Huỳnh Thành; ghi quyết định review, lý do và yêu cầu sửa nếu có.
+
+**Sản phẩm bàn giao:** `docs/architecture.md`, `docs/test-plan.md`, `docs/backlog.csv`, nội dung báo cáo và minh chứng board/đóng góp tại `docs/team.md`.
+
+**Tiêu chí hoàn thành:** sơ đồ khớp môi trường QA; giải thích được ba luồng và ít nhất 3–5 module liên quan; báo cáo dẫn đúng lần chạy, không gán demo tổng hợp thành lỗi tự nhiên; mọi mục còn thiếu có người nhận xử lý.
+
+### K’ Nguyễn Quang Trường — Môi trường và dữ liệu QA
+
+- Dựng backend Linux container, frontend Nuxt và SQLite QA; kiểm tra UI cổng 3000, API cổng 19000 và trạng thái healthy.
+- Khóa Mealie commit, dependency và cấu hình ảnh; ghi runtime, hệ điều hành, browser và image ID để lần chạy có thể đối chiếu.
+- Quản lý bootstrap tài khoản và group/household QA riêng; hướng dẫn cấu hình `.env`, không đưa credential hoặc trạng thái đăng nhập lên Git.
+- Duy trì seed gồm 10 recipe, 3 category, 10 food, 2 shopping list và 7 meal entry; chạy seed lần hai và kiểm tra không tăng bản ghi.
+- Viết hướng dẫn dựng từ máy mới, xử lý xung đột cổng, lỗi dependency và khác biệt nền tảng; phối hợp dựng lại trên máy thành viên thứ hai.
+- Kiểm tra chéo hướng dẫn kiến trúc và môi trường do Nguyễn Đức Thành viết bằng cách thực hiện lại các lệnh trong onboarding.
+
+**Sản phẩm bàn giao:** `Dockerfile.backend`, `docker-compose.visual.yml`, `project-lock.json`, `.env.example`, `scripts/bootstrap.mjs`, `scripts/seed.mjs`, `scripts/verify-seed.mjs`, `docs/onboarding.md` và bằng chứng môi trường/seed trong `evidence/`.
+
+**Tiêu chí hoàn thành:** dựng được đúng phiên bản từ hướng dẫn; seed chạy lại không nhân bản; môi trường thứ hai có metadata và kết quả riêng; không đưa dữ liệu cá nhân hoặc bí mật vào gói nộp.
+
+### Nguyễn Viết Toàn — Playwright VR01–VR04 và tự động hóa
+
+- Duy trì cấu hình Playwright, setup đăng nhập và storage state; khóa Chromium, viewport 1440×900, locale, timezone, ngày và chế độ giao diện theo `project-lock.json`.
+- Phụ trách VR01 Recipe Finder, VR02 Recipe Timeline, VR03 Recipe Categories và VR04 Meal Planner trong `tests/visual.spec.ts`.
+- Với từng scenario, kiểm tra route và nội dung đại diện, chờ skeleton/font/ảnh/transition ổn định, bắt lỗi API/JavaScript rồi so sánh screenshot; giải thích đúng hai ngưỡng pixel.
+- Phụ trách FLOW01 tạo công thức và FLOW02 tạo meal entry qua API, kiểm tra dữ liệu trên UI, dọn đúng bản ghi tạm trong `tests/business.spec.ts`.
+- Duy trì script chạy, typecheck và phát hiện test; phối hợp với Trường cấu hình Windows self-hosted runner, chạy CI và lưu URL workflow cùng artifact khi thực hiện.
+- Kiểm tra chéo seed/onboarding của Trường; bàn giao baseline VR01–VR04 cho Huỳnh Thành review, không tự cập nhật ảnh để bỏ qua lỗi.
+
+**Sản phẩm bàn giao:** `playwright.config.ts`, `tests/auth.setup.ts`, phần VR01–VR04 và FLOW01–FLOW02, `package.json`, `.github/workflows/visual-regression.yml`, ảnh baseline tương ứng và report của lần chạy.
+
+**Tiêu chí hoàn thành:** bốn visual và hai smoke chạy đạt trong môi trường đã khóa; baseline thiếu phải fail ở chế độ so sánh; dữ liệu tạm được dọn; CI chỉ ghi đã đạt khi có lần chạy thành công thực tế.
+
+### Huỳnh Thành — VR05–VR08 và phân tích diff
+
+- Phụ trách VR05 Shopping Lists, VR06 User Profile, VR07 Group Foods và VR08 Meal Plan Settings trong `tests/visual.spec.ts`.
+- Phụ trách FLOW03 tạo shopping list qua API, xác nhận UI hiển thị và dọn bản ghi tạm; bảo đảm seed có hai list để VR05 giữ đúng trang index.
+- Rà soát cả tám baseline: đúng tài khoản, route, dữ liệu và trạng thái; ghi nhận người duyệt, ngày và quyết định tại `docs/baseline-review.md`.
+- Đọc expected/actual/diff khi fail; phân biệt lỗi môi trường, dữ liệu, harness, regression và intentional change; ghi cách tái hiện, nguyên nhân và hướng xử lý vào hồ sơ defect.
+- Duy trì hai demo CSS có kiểm soát: dịch nội dung 48 pixel và đổi nền theo REQ-DEMO-01; kiểm tra mismatch thật, lưu phân loại và giữ nguyên baseline trong demo.
+- Tổng hợp JSON/HTML, ảnh ba FLOW và metadata; chuẩn bị demo diff, giải thích ngưỡng/giới hạn và kiểm tra chéo VR01–VR04 của Toàn.
+
+**Sản phẩm bàn giao:** phần VR05–VR08 và FLOW03, `scripts/demo-regression.mjs`, `scripts/collect-evidence.mjs`, `docs/defects.csv`, `docs/baseline-review.md`, `docs/defense-demo.md` và bằng chứng trong `evidence/`.
+
+**Tiêu chí hoàn thành:** bốn visual và FLOW03 chạy đạt; đủ tám baseline được nhóm duyệt; demo tạo đúng mismatch và được ghi là tổng hợp; defect có bằng chứng và nguyên nhân; report khớp lần chạy được công bố.
+
+### Quy trình phối hợp và nghiệm thu
+
+1. Mỗi đầu việc có issue/task, người phụ trách, sản phẩm và tiêu chí hoàn thành. Thành viên cập nhật link bằng chứng thực tế vào `docs/team.md` và board.
+2. Dùng nhánh `docs/<noi-dung>` hoặc `test/<scenario>`, commit mô tả rõ thay đổi và PR để người kiểm tra chéo đọc. Vì các scenario dùng chung file, Toàn và Huỳnh Thành thống nhất vùng sửa trước khi tích hợp.
+3. Trường xác nhận môi trường và seed; Toàn và Huỳnh Thành chạy typecheck, smoke, visual và đọc report. Mỗi lần chạy ghi commit, cấu hình và thời điểm, không dùng report cũ làm bằng chứng vừa chạy.
+4. Khi ảnh lệch, người phụ trách scenario phối hợp người review xác định nguyên nhân. Chỉ cập nhật baseline khi có yêu cầu thay đổi hợp lệ và quyết định chấp nhận; lưu diff, người duyệt và commit trước/sau.
+5. Trước giữa kỳ 20/10, cả nhóm tập dượt dựng môi trường, ba nghiệp vụ, kiến trúc và kế hoạch K10. Trước bảo vệ cuối kỳ, hoàn tất chạy lại trên máy khác, duyệt baseline, báo cáo, gói mã nguồn và đánh giá chéo; nộp báo cáo trước bảo vệ một tuần theo yêu cầu môn học.
+
+**Trạng thái để tiếp tục nghiệm thu:** bằng chứng lưu ngày 12/10/2026 đạt 12/12 (1 setup, 8 visual, 3 smoke). Duyệt baseline chính thức, dựng lại trên máy thứ hai, CI GitHub và xác nhận đóng góp vẫn cần hoàn tất; xem [backlog](docs/backlog.csv). Phân công trên không thay đổi trạng thái các mục này thành đã xong.
+
+Tham khảo cách tổ chức vai trò và đầu việc từ [R02-K05-Mealie-QA](https://github.com/Huuthien12/R02-K05-Mealie-QA). Phạm vi và sản phẩm của nhóm này là R02 + K10 với Playwright; các nhiệm vụ ở trên được điều chỉnh theo báo cáo giữa kỳ và harness hiện tại.
+
 ## Dựng lại
 Xem [onboarding](docs/onboarding.md). Trên máy hiện tại: UI http://localhost:3000, API http://localhost:19000. Cổng 19000 tránh xung đột với MinIO đang dùng 9000; trong container API vẫn nghe ở 9000.
 
