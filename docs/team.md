@@ -14,7 +14,7 @@ Họ tên và MSSV được đối chiếu từ báo cáo giữa kỳ do nhóm c
 Phân công trên là phân công đã được ghi nhận trong repository; nhóm vẫn phải bổ sung link commit/task thực tế và xác nhận đóng góp cá nhân nếu giảng viên yêu cầu. Hồ sơ kỹ thuật được hoàn thiện với sự hỗ trợ của Codex theo yêu cầu người dùng; nhóm cần tự chạy lại, hiểu từng test và tuân thủ quy định sử dụng công cụ hỗ trợ của môn học nếu có.
 
 ## Duyệt baseline
-Tám ảnh đã được rà soát trực quan kỹ thuật trong phiên làm việc ngày 12/10/2026. Quyết định chấp nhận, người duyệt và ngày ký được ghi tại `docs/baseline-review.md`; phần chữ ký/xác nhận của nhóm vẫn cần nhóm bổ sung trước khi nộp nếu môn học yêu cầu.
+Tám ảnh đã được Nhóm 23 rà soát trực quan kỹ thuật trong phiên cập nhật ngày 20/10/2026. Kết quả và quyết định của nhóm được ghi tại `docs/baseline-review.md`; hồ sơ này không yêu cầu chữ ký riêng.
 
 ## Đánh giá chéo
 Mỗi người tự ghi đóng góp và minh chứng; các thành viên còn lại nhận xét mức độ tham gia và phối hợp. Không điền sẵn điểm hoặc nhận xét tích cực khi chưa có dữ liệu.

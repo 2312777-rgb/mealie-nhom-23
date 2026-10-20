@@ -263,7 +263,7 @@ def build(final: bool) -> Path:
         ['Pass','Đúng route và dữ liệu đại diện; không có lỗi API/JavaScript; ảnh trong ngưỡng 1% pixel khác biệt'],
         ['Fail','Sai route hoặc thiếu dữ liệu hoặc lỗi API/JavaScript hoặc ảnh vượt ngưỡng'],
         ['Baseline thiếu','Fail khi chạy so sánh; tạo ảnh bằng lệnh update riêng và duyệt trực quan'],
-        ['Intentional change','Có yêu cầu và người duyệt chấp thuận; lưu lý do trước khi cập nhật baseline'],
+        ['Intentional change','Có yêu cầu hợp lệ và nhóm thống nhất; lưu lý do trước khi cập nhật baseline'],
         ['Regression','Thay đổi chưa được chấp thuận; phân tích nguyên nhân và sửa trước khi chạy lại'],
     ],[4.5,12.2])
     para(doc,'Nhóm đặt maxDiffPixelRatio=0.01, tức là cho phép sai khác tối đa khoảng 1% số pixel. Đây là lựa chọn thực nghiệm của nhóm, không phải tiêu chuẩn chung cho mọi dự án. Vì vậy khi test fail, nhóm vẫn phải mở ảnh diff để xem thay đổi có thực sự đáng lo hay không.')
@@ -327,7 +327,7 @@ def build(final: bool) -> Path:
         ['Trước bảo vệ một tuần','Nộp mã nguồn và báo cáo tổng kết đã rà soát thông tin nhóm'],
         ['Ngày thi cuối kỳ','Demo automation và phân tích diff; trả lời câu hỏi; đánh giá chéo'],
     ],[4.2,12.5])
-    para(doc,'Tên nhóm và họ tên/MSSV đã được cập nhật. Trước khi nộp, nhóm em chỉ còn cần bổ sung link commit/task thực tế, ghi rõ ai duyệt baseline, thêm URL CI nếu có và cập nhật ngày bảo vệ theo thông báo của giảng viên. Tài liệu hiện chưa có ngày bảo vệ cụ thể nên nhóm không tự điền ngày.')
+    para(doc,'Tên nhóm và họ tên/MSSV đã được cập nhật. Trước khi nộp, nhóm em chỉ còn cần bổ sung link commit/task thực tế, thêm URL CI nếu có và cập nhật ngày bảo vệ theo thông báo của giảng viên. Tài liệu hiện chưa có ngày bảo vệ cụ thể nên nhóm không tự điền ngày.')
     para(doc,'Khi demo, nhóm em dự kiến giới thiệu đề tài, mở Mealie, chạy qua ba luồng nghiệp vụ, giải thích sơ đồ, chạy smoke test và tám visual test. Sau đó nhóm tạo một thay đổi CSS nhỏ để cho thấy ảnh diff, giải thích nguyên nhân và cách khôi phục baseline. Phần CI đã có cấu hình, nhưng visual test cần runner Windows cùng nền tảng với baseline.')
 
     page(doc,('12' if final else '11')+' Đối chiếu yêu cầu và kết luận')
