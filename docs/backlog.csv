@@ -9,6 +9,6 @@ QA07,Tạo baseline và so sánh,Done,tests/__screenshots__ và evidence/final-r
 QA08,Demo intentional và regression tổng hợp,Done,evidence/demo-regression và evidence/demo-intentional,Nhóm phân công
 QA09,Cấu hình CI validate và self hosted visual,Configured chưa chạy GitHub,.github/workflows/visual-regression.yml,Nhóm phân công
 QA10,Báo cáo Word và gói nộp,Done,output,Nhóm phân công
-TEAM01,Bổ sung họ tên MSSV và xác nhận phân công,Pending,docs/team.md,Nhóm
+TEAM01,Bổ sung họ tên MSSV và đồng bộ phân công,Done,README.md và docs/team.md,Nhóm
 TEAM02,Duyệt baseline và chạy lại trên máy thành viên,Pending,docs/baseline-review.md,Nhóm
 TEAM03,Cập nhật Git board và đánh giá chéo thực tế,Pending,Link minh chứng của nhóm,Nhóm

@@ -45,7 +45,7 @@ Call log:
       - generic [ref=e6]:
         - button [ref=e7] [cursor=pointer]
         - link [ref=e12] [cursor=pointer]:
-          - /url: /g/r02-k10-qa
+          - /url: /g/r02-k10-qa-1
           - button [ref=e13]
         - generic [ref=e18]: Mealie
         - generic [ref=e23]:
@@ -54,30 +54,30 @@ Call log:
         - button "Logout" [ref=e34] [cursor=pointer]
     - navigation [ref=e39]:
       - generic [ref=e40]:
-        - link "ad767ea1-f856-4e8f-a6e4-ce0d1bbb2a9c Visual QA Team Favorite Recipes" [ref=e41] [cursor=pointer]:
+        - link "10305e48-8e53-4ec6-b5b2-94e4924d0068 Visual QA Team Favorite Recipes" [ref=e41] [cursor=pointer]:
           - /url: /user/profile
           - generic [ref=e43]:
-            - img "ad767ea1-f856-4e8f-a6e4-ce0d1bbb2a9c" [ref=e45]:
-              - img "ad767ea1-f856-4e8f-a6e4-ce0d1bbb2a9c" [ref=e46]
+            - img "10305e48-8e53-4ec6-b5b2-94e4924d0068" [ref=e45]:
+              - img "10305e48-8e53-4ec6-b5b2-94e4924d0068" [ref=e46]
             - generic [ref=e47]:
               - generic [ref=e48]: Visual QA Team
               - link "Favorite Recipes" [ref=e50]:
-                - /url: /user/ad767ea1-f856-4e8f-a6e4-ce0d1bbb2a9c/favorites
+                - /url: /user/10305e48-8e53-4ec6-b5b2-94e4924d0068/favorites
         - separator [ref=e55]
         - button "Create" [ref=e56] [cursor=pointer]
         - list [ref=e61]:
           - link "Recipes" [ref=e63] [cursor=pointer]:
-            - /url: /g/r02-k10-qa
+            - /url: /g/r02-k10-qa-1
           - link "Recipe Finder" [ref=e71] [cursor=pointer]:
-            - /url: /g/r02-k10-qa/recipes/finder
+            - /url: /g/r02-k10-qa-1/recipes/finder
           - link "Meal Planner" [ref=e79] [cursor=pointer]:
             - /url: /household/mealplan/planner/view
           - link "Shopping Lists" [ref=e87] [cursor=pointer]:
             - /url: /shopping-lists
           - link "Timeline" [ref=e95] [cursor=pointer]:
-            - /url: /g/r02-k10-qa/recipes/timeline
+            - /url: /g/r02-k10-qa-1/recipes/timeline
           - link "Cookbooks" [ref=e103] [cursor=pointer]:
-            - /url: /g/r02-k10-qa/cookbooks
+            - /url: /g/r02-k10-qa-1/cookbooks
           - listitem [ref=e112] [cursor=pointer]:
             - generic [ref=e117]: Organizers
       - list [ref=e124]:
@@ -116,7 +116,7 @@ Call log:
 
 ```ts
   1  | import { expect, test, type Page } from "@playwright/test";
-  2  |
+  2  | 
   3  | const group = encodeURIComponent(process.env.MEALIE_TEST_GROUP_SLUG ?? "home");
   4  | const scenarios = [
   5  |   { id: "VR01", name: "recipe-finder", path: `/g/${group}/recipes/finder`, ready: /No recipes found/ },
@@ -128,7 +128,7 @@ Call log:
   11 |   { id: "VR07", name: "group-food-data", path: "/group/data/foods", ready: /QA Food 01/ },
   12 |   { id: "VR08", name: "meal-plan-settings", path: "/household/mealplan/settings", ready: /Meal Plan|Recipe Rules/i },
   13 | ];
-  14 |
+  14 | 
   15 | async function stabilise(page: Page): Promise<void> {
   16 |   // Let Vue remove its enter/from classes before disabling transitions.
   17 |   await expect(page.locator(".spin-enter-active, .spin-enter-from, .spin-enter-to")).toHaveCount(0);
@@ -142,7 +142,7 @@ Call log:
   25 |     await Promise.all(Array.from(document.images).map(image => image.decode().catch(() => undefined)));
   26 |   });
   27 | }
-  28 |
+  28 | 
   29 | for (const scenario of scenarios) {
   30 |   test(`${scenario.id} ${scenario.name}`, async ({ page }, testInfo) => {
   31 |     const failures: string[] = [];
@@ -189,6 +189,5 @@ Call log:
   71 |     await expect.poll(() => new URL(page.url()).pathname.replace(/\/$/, "")).toBe(scenario.path);
   72 |   });
   73 | }
-  74 |
-  75 |
+  74 | 
 ```
