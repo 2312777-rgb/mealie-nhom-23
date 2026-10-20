@@ -126,7 +126,7 @@ def build(final: bool) -> Path:
     doc.styles['Heading 2'].font.size=Pt(13)
     for name in ['Heading 1','Heading 2']:
         doc.styles[name].paragraph_format.space_after=Pt(9)
-    header=sec.header.paragraphs[0]; header.text='R02 K10   |   Mealie   |   Nhóm 4 thành viên'
+    header=sec.header.paragraphs[0]; header.text='R02 K10   |   Mealie   |   Nhóm 23   |   4 thành viên'
     header.runs[0].font.size=Pt(9); header.runs[0].font.color.rgb=RGBColor(0,0,0)
     footer=sec.footer.paragraphs[0]; footer.alignment=WD_ALIGN_PARAGRAPH.CENTER
     r=footer.add_run('Trang '); r.font.size=Pt(9)
@@ -138,7 +138,7 @@ def build(final: bool) -> Path:
     p=doc.add_paragraph('MÔN KIỂM THỬ PHẦN MỀM'); p.alignment=WD_ALIGN_PARAGRAPH.CENTER; p.runs[0].bold=True
     p=doc.add_paragraph('Kiểm thử hồi quy giao diện hệ thống Mealie bằng Playwright',style='Subtitle'); p.alignment=WD_ALIGN_PARAGRAPH.CENTER; p.runs[0].font.size=Pt(19)
     doc.add_paragraph('\n')
-    for text in ['Tổ hợp đề tài R02 và K10','Giảng viên Nguyễn Thế Lâm','Quy mô nhóm 4 sinh viên','Ngày cập nhật 12 tháng 10 năm 2026','Phiên bản hệ thống Mealie 3.28.0']:
+    for text in ['Nhóm 23','Tổ hợp đề tài R02 và K10','Giảng viên Nguyễn Thế Lâm','Quy mô 4 sinh viên','Ngày cập nhật 20 tháng 10 năm 2026','Phiên bản hệ thống Mealie 3.28.0']:
         p=doc.add_paragraph(text); p.alignment=WD_ALIGN_PARAGRAPH.CENTER
     doc.add_paragraph('\n')
     para(doc,'Hồ sơ kỹ thuật được tổng hợp từ mã nguồn và kết quả kiểm chứng trong môi trường QA cục bộ. Thông tin định danh nhóm, họ tên, MSSV và xác nhận đóng góp cần được nhóm điền trước khi nộp.')
@@ -170,7 +170,7 @@ def build(final: bool) -> Path:
         ['TV3','Chưa cung cấp','Playwright VR01 đến VR04 và tự động hóa'],
         ['TV4','Chưa cung cấp','VR05 đến VR08 và phân tích diff và demo'],
     ],[2,5,9.7])
-    para(doc,'Bảng phân công là đề xuất cho nhóm bốn người, không phải bằng chứng về đóng góp đã thực hiện. Nhóm cần xác nhận người phụ trách, lịch sử commit và đánh giá chéo bằng dữ liệu thực tế.')
+    para(doc,'Bảng phân công của Nhóm 23 ghi nhận vai trò và phạm vi bàn giao của bốn thành viên. Link commit/task và đánh giá chéo cần được nhóm bổ sung bằng dữ liệu thực tế nếu giảng viên yêu cầu.')
 
     page(doc,'2 Kiến trúc hệ thống')
     para(doc,'Môi trường QA sử dụng frontend Nuxt trên host ở cổng 3000 và backend FastAPI trong Docker ở cổng host 19000. SQLAlchemy lưu dữ liệu SQLite trong volume QA riêng. Trong production, upstream có thể phục vụ frontend SPA đã build qua FastAPI; cấu hình đó không phải môi trường được dùng trong lần kiểm chứng này.')

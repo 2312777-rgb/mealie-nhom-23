@@ -1,6 +1,6 @@
 # Thông tin nhóm và bàn giao
 
-Quy mô: 4 sinh viên. Phân công chính thức được đồng bộ theo bảng vai trò và tiêu chí bàn giao trong README của repository.
+Nhóm 23, quy mô 4 sinh viên. Phân công chính thức được đồng bộ theo bảng vai trò và tiêu chí bàn giao trong README của repository.
 
 | Thành viên | Họ tên | MSSV | Phạm vi được phân công | Minh chứng kỹ thuật | Trạng thái phân công |
 | --- | --- | --- | --- | --- | --- |
