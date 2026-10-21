@@ -17,3 +17,7 @@ Máy thứ hai đã clone repository Nhóm 23, checkout Mealie tại commit `879
 | Playwright report | Mở được tại `http://localhost:9323` |
 
 Kết quả này chứng minh hướng dẫn onboarding, lock commit, seed và automation có thể được thực hiện lại trên một máy khác. File `.env` và credential chỉ dùng local, không đưa vào Git.
+Người thực hiện: NGUYỄN ĐỨC THÀNH – MSSV 2312749
+Máy kiểm chứng: Máy thành viên thứ hai
+Ngày chạy: 21/10/2026
+Kết quả: 4 smoke passed, 9 visual passed
