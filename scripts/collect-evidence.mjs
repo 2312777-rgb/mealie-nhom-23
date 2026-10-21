@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import os from 'node:os';
@@ -20,8 +20,9 @@ const summary={rows:[
 ['Ba nghiệp vụ','3 trên 3 pass','evidence/flows và final-results.json'],
 ['Toàn bộ test','12 pass và 0 fail',`${(final.stats.duration/1000).toFixed(1)} giây gồm 1 setup`],
 ['Seed chạy lại','Không tăng số bản ghi','10 recipe 3 category 10 food 2 list 7 meal'],
+...(existsSync('evidence/second-machine-verification.md') ? [['Máy thành viên thứ hai','Đã chạy thành công','4 smoke pass và 9 visual pass ngày 21/10/2026']] : []),
 ['Hai demo CSS','Mỗi demo tạo 1 mismatch đúng dự kiến','evidence/demo-regression và demo-intentional'],
 ['GitHub CI','Đã cấu hình chưa chạy GitHub','Cần runner Windows và URL workflow run'],
-],conclusion:'Qua lần chạy thực tế, nhóm em xác nhận bộ test chạy được trên máy QA hiện tại. Tám baseline đều pass và hai demo CSS tạo ra mismatch đúng như dự kiến. Hai demo này chỉ là thay đổi giả lập, không phải lỗi tự nhiên của Mealie. Nhóm chưa chạy visual test trên máy thành viên thứ hai và chưa chạy toàn bộ test upstream, nên đây vẫn là kết luận trong phạm vi đã chọn.'};
+],conclusion:'Qua lần chạy thực tế, nhóm em xác nhận bộ test chạy được trên máy QA chính và máy thành viên thứ hai. Máy chính đạt 12/12 test; máy thứ hai đạt 4 smoke pass và 9 visual pass, seed chạy lại không tăng số bản ghi. Tám baseline đều pass và hai demo CSS tạo ra mismatch đúng như dự kiến. Hai demo này chỉ là thay đổi giả lập, không phải lỗi tự nhiên của Mealie; nhóm chưa chạy toàn bộ test upstream.'};
 writeFileSync('evidence/verification-summary.json',JSON.stringify(summary,null,2));
 console.log(JSON.stringify({final:final.stats,baselines:images.length,demos:2},null,2));

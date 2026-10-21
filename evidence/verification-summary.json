@@ -31,6 +31,11 @@
       "10 recipe 3 category 10 food 2 list 7 meal"
     ],
     [
+      "Máy thành viên thứ hai",
+      "Đã chạy thành công",
+      "4 smoke pass và 9 visual pass ngày 21/10/2026"
+    ],
+    [
       "Hai demo CSS",
       "Mỗi demo tạo 1 mismatch đúng dự kiến",
       "evidence/demo-regression và demo-intentional"
@@ -41,5 +46,5 @@
       "Cần runner Windows và URL workflow run"
     ]
   ],
-  "conclusion": "Qua lần chạy thực tế, nhóm em xác nhận bộ test chạy được trên máy QA hiện tại. Tám baseline đều pass và hai demo CSS tạo ra mismatch đúng như dự kiến. Hai demo này chỉ là thay đổi giả lập, không phải lỗi tự nhiên của Mealie. Nhóm chưa chạy visual test trên máy thành viên thứ hai và chưa chạy toàn bộ test upstream, nên đây vẫn là kết luận trong phạm vi đã chọn."
+  "conclusion": "Qua lần chạy thực tế, nhóm em xác nhận bộ test chạy được trên máy QA chính và máy thành viên thứ hai. Máy chính đạt 12/12 test; máy thứ hai đạt 4 smoke pass và 9 visual pass, seed chạy lại không tăng số bản ghi. Tám baseline đều pass và hai demo CSS tạo ra mismatch đúng như dự kiến. Hai demo này chỉ là thay đổi giả lập, không phải lỗi tự nhiên của Mealie; nhóm chưa chạy toàn bộ test upstream."
 }

@@ -73,7 +73,7 @@ Phân công dưới đây dựa trên báo cáo giữa kỳ R02 K10, được ch
 4. Khi ảnh lệch, người phụ trách scenario phối hợp với các thành viên còn lại để xác định nguyên nhân. Chỉ cập nhật baseline khi có yêu cầu thay đổi hợp lệ và quyết định của nhóm; lưu diff và commit trước/sau.
 5. Trước giữa kỳ 20/10, cả nhóm tập dượt dựng môi trường, ba nghiệp vụ, kiến trúc và kế hoạch K10. Trước bảo vệ cuối kỳ, hoàn tất chạy lại trên máy khác, duyệt baseline, báo cáo, gói mã nguồn và đánh giá chéo; nộp báo cáo trước bảo vệ một tuần theo yêu cầu môn học.
 
-**Trạng thái cập nhật:** bằng chứng lưu ngày 20/10/2026 đạt 12/12 (1 setup, 8 visual, 3 smoke). Nhóm 23 đã tự rà soát 8 baseline; không yêu cầu chữ ký riêng trong hồ sơ này. Các việc còn lại là dựng lại trên máy thứ hai, chạy CI GitHub và bổ sung link đóng góp cá nhân nếu giảng viên yêu cầu; xem [backlog](docs/backlog.csv).
+**Trạng thái cập nhật:** bằng chứng ngày 20/10/2026 trên máy chính đạt 12/12 (1 setup, 8 visual, 3 smoke). Ngày 21/10/2026, máy thành viên thứ hai cũng chạy được bootstrap, seed idempotence, typecheck, 4 smoke pass và 9 visual pass; xem [evidence/second-machine-verification.md](evidence/second-machine-verification.md). Nhóm 23 đã tự rà soát 8 baseline; không yêu cầu chữ ký riêng trong hồ sơ này. Các việc còn lại là chạy CI GitHub nếu muốn dùng CI làm bằng chứng và bổ sung link đóng góp cá nhân/peer evaluation nếu giảng viên yêu cầu.
 
 Tham khảo cách tổ chức vai trò và đầu việc từ [R02-K05-Mealie-QA](https://github.com/Huuthien12/R02-K05-Mealie-QA). Phạm vi và sản phẩm của nhóm này là R02 + K10 với Playwright; các nhiệm vụ ở trên được điều chỉnh theo báo cáo giữa kỳ và harness hiện tại.
 
